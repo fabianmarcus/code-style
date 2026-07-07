@@ -85,10 +85,10 @@ const eslintConfig = defineConfig([
       '@typescript-eslint/prefer-nullish-coalescing': ['error'], // Prefer ?? over || for nullish checks
       '@typescript-eslint/explicit-function-return-type': ['warn'], // Require explicit return types on functions and class methods
       '@typescript-eslint/array-type': ['error', { default: 'array-simple' }], // Enforce a consistent style for array types
-      '@typescript-eslint/no-unused-vars': ['error', {
+      '@typescript-eslint/no-unused-vars': ['error', { // Warn about unused variables in TypeScript
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
-      }], // Warn about unused variables in TypeScript
+      }],
 
       // JSDoc
       'jsdoc/check-alignment': ['error'], // Ensure JSDoc comments are aligned
@@ -104,11 +104,11 @@ const eslintConfig = defineConfig([
       'import/namespace': ['error'], // Ensure imported namespaces contain dereferenced properties as they are dereferenced
       'import/no-unresolved': ['error'], // Ensure imports point to a file/module that can be resolved
       'import/no-duplicates': ['error'], // Disallow duplicate imports
-      'perfectionist/sort-imports': ['error', {
+      'perfectionist/sort-imports': ['error', { // Sort imports by line length (shortest first)
         order: 'asc',
         type: 'line-length',
-      }], // Sort imports by line length (shortest first)
-      
+      }],
+
       // Node.js & Security
       'n/no-path-concat': ['off'], // Disallow path concatenation with __dirname and __filename
       'n/no-unsafe-regex': ['error'], // Disallow unsafe regular expressions
