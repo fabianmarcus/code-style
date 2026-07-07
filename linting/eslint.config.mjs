@@ -49,6 +49,7 @@ const eslintConfig = defineConfig([
       // Debugging
       'no-console': ['warn'],
       'no-debugger': ['error'],
+
       // Code style
       'indent': ['error', 2], // Indentation of 2 spaces
       'semi': ['error', 'always'], // Always use semicolons at the end of statements
@@ -57,21 +58,23 @@ const eslintConfig = defineConfig([
       'no-trailing-spaces': ['error'], // Disallow trailing whitespace
       'max-len': ['error', { code: 120 }], // Limit lines to 120 characters
       'comma-dangle': ['error', 'always-multiline'], // Require trailing commas in multiline objects and arrays
+
       // JavaScript
       'no-var': ['error'], // Use let or const instead of var
-      'no-unused-vars': ['off'], // Warn about unused variables
-      'object-shorthand': ['off'], // Require object shorthand syntax
-      'eqeqeq': ['error', 'always'], // Require the use of === and !==
-      'arrow-body-style': ['error', 'as-needed'], // Enforce consistent use of braces in arrow functions
-      'prefer-arrow-callback': ['error'], // Prefer arrow functions as callbacks
-      'prefer-template': ['error'], // Prefer template literals over string concatenation
-      'prefer-const': ['error'], // Prefer const for variables that are never reassigned
       'no-eval': ['error'], // Disallow eval()
       'no-new-func': ['error'], // Disallow new Function()
-      'default-case': ['error'], // Require default branch in switch statements
+      'no-unused-vars': ['off'], // Warn about unused variables
       'no-else-return': ['error'], // Disallow else blocks after return statements
       'no-implied-eval': ['error'], // Disallow implied eval-like calls
+      'arrow-body-style': ['error', 'as-needed'], // Enforce consistent use of braces in arrow functions
+      'prefer-arrow-callback': ['error'], // Prefer arrow functions as callbacks
       'consistent-return': ['error'], // Require consistent return behavior
+      'eqeqeq': ['error', 'always'], // Require the use of === and !==
+      'prefer-template': ['error'], // Prefer template literals over string concatenation
+      'object-shorthand': ['off'], // Require object shorthand syntax
+      'prefer-const': ['error'], // Prefer const for variables that are never reassigned
+      'default-case': ['error'], // Require default branch in switch statements
+
       // TypeScript
       '@typescript-eslint/no-explicit-any': ['off'], // Disallow usage of the any type
       '@typescript-eslint/no-misused-promises': ['error'], // Disallow Promises in places expecting non-Promise values
@@ -86,12 +89,14 @@ const eslintConfig = defineConfig([
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
       }], // Warn about unused variables in TypeScript
+
       // JSDoc
       'jsdoc/check-alignment': ['error'], // Ensure JSDoc comments are aligned
       'jsdoc/check-indentation': ['error'], // Ensure JSDoc comments are indented correctly
       'jsdoc/newline-after-description': ['error'], // Require a newline after the description in JSDoc comments
       'jsdoc/require-param': ['error'], // Require @param tags in JSDoc comments
       'jsdoc/require-returns': ['error'], // Require @returns tags in JSDoc comments
+
       // Import
       'import/order': ['off'], // Replaced by perfectionist/sort-imports
       'import/named': ['error'], // Ensure named imports correspond to a named export in the remote file
@@ -103,6 +108,7 @@ const eslintConfig = defineConfig([
         order: 'asc',
         type: 'line-length',
       }], // Sort imports by line length (shortest first)
+      
       // Node.js & Security
       'n/no-path-concat': ['off'], // Disallow path concatenation with __dirname and __filename
       'n/no-unsafe-regex': ['error'], // Disallow unsafe regular expressions
