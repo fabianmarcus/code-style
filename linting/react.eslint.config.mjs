@@ -8,7 +8,7 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 const eslintConfig = defineConfig([
   ...baseEslintConfig,
   pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat['jsx-runtime'], // React 17+ JSX Transform (kein import React nötig)
+  pluginReact.configs.flat['jsx-runtime'], // React 17+ JSX transform (no import React required)
   pluginJsxA11y.flatConfigs.recommended,
   {
     plugins: {

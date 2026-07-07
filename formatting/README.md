@@ -1,15 +1,15 @@
 # Prettier Base Config
 
-Diese Dateien dienen als zentrale, wiederverwendbare Prettier-Basis.
+These files provide a central, reusable Prettier baseline.
 
-## Enthalten
+## Included
 
-- `prettier.config.mjs`: Generelle Team-Defaults
-- `.prettierignore`: Generelle Ignore-Liste fuer Build-/Generated-Artefakte
+- `prettier.config.mjs`: General team defaults
+- `.prettierignore`: General ignore list for build/generated artifacts
 
-## Verwendung in einem Projekt (ESM)
+## Usage In A Project (ESM)
 
-Lege im Zielprojekt eine `prettier.config.mjs` an:
+Create a `prettier.config.mjs` file in the target project:
 
 ```js
 import baseConfig from "../code-style/formatting/prettier.config.mjs";
@@ -21,7 +21,7 @@ const prettierConfig = {
 export default prettierConfig;
 ```
 
-## Projekt-spezifische Overrides
+## Project-Specific Overrides
 
 ```js
 import baseConfig from "../code-style/formatting/prettier.config.mjs";
@@ -34,13 +34,13 @@ const prettierConfig = {
 export default prettierConfig;
 ```
 
-## Ignore-Datei einbinden
+## Include Ignore File
 
-Option 1: `.prettierignore` aus dieser Struktur in das Projekt kopieren.
+Option 1: Copy `.prettierignore` from this structure into the project.
 
-Option 2: Eigene `.prettierignore` im Projekt pflegen und bei Bedarf erweitern.
+Option 2: Maintain a local `.prettierignore` in the project and extend it when needed.
 
-## Pruefen
+## Check
 
 ```bash
 prettier --check .

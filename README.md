@@ -1,15 +1,15 @@
 # Code Style
 
-Zentrales Repository fuer wiederverwendbare Coding-Standards rund um Formatierung und Linting.
+Central repository for reusable coding standards for formatting and linting.
 
-Ziel ist es, konsistente Konfigurationen bereitzustellen, die in mehreren Projekten per Import genutzt und bei Bedarf projekt-spezifisch erweitert werden koennen.
+The goal is to provide consistent configurations that can be imported in multiple projects and extended locally when needed.
 
-## Inhalte
+## Contents
 
 - [Formatting (Prettier)](formatting/README.md)
 - [Linting (ESLint)](linting/README.md)
 
-## Einsatz
+## Usage
 
-Die Konfigurationen sind als Basis gedacht.
-Projekte koennen die jeweiligen Module importieren und nur die wirklich noetigen Overrides lokal definieren.
+The configurations are intended to be used as a base.
+Projects can import the relevant modules and define only the overrides they actually need locally.

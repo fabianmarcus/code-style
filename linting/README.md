@@ -1,17 +1,17 @@
 # ESLint Base Config
 
-Diese Dateien dienen als zentrale, wiederverwendbare ESLint-Basis (Flat Config).
+These files provide a central, reusable ESLint baseline (Flat Config).
 
-## Enthalten
+## Included
 
-- `eslint.config.mjs`: Generelle Team-Defaults fuer JavaScript/TypeScript
-- `react.eslint.config.mjs`: React-spezifische Erweiterung auf Basis der generellen Config
-- `angular.eslint.mjs`: Angular-spezifische Erweiterung auf Basis der generellen Config
-- `eslint.ignores.mjs`: Wiederverwendbare Ignore-Patterns
+- `eslint.config.mjs`: General team defaults for JavaScript/TypeScript
+- `react.eslint.config.mjs`: React-specific extension based on the general config
+- `angular.eslint.mjs`: Angular-specific extension based on the general config
+- `eslint.ignores.mjs`: Reusable ignore patterns
 
-## Verwendung in einem Projekt (generell)
+## Usage In A Project (General)
 
-Lege im Zielprojekt eine `eslint.config.mjs` an:
+Create a `eslint.config.mjs` file in the target project:
 
 ```js
 import baseConfig from "../code-style/linting/eslint.config.mjs";
@@ -24,7 +24,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 ```
 
-## Verwendung fuer React
+## Usage For React
 
 ```js
 import reactConfig from "../code-style/linting/react.eslint.config.mjs";
@@ -37,7 +37,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 ```
 
-## Verwendung fuer Angular
+## Usage For Angular
 
 ```js
 import angularConfig from "../code-style/linting/angular.eslint.mjs";
@@ -50,7 +50,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 ```
 
-## Projekt-spezifische Overrides
+## Project-Specific Overrides
 
 ```js
 import baseConfig from "../code-style/linting/eslint.config.mjs";
@@ -68,7 +68,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 ```
 
-## Pruefen
+## Check
 
 ```bash
 eslint .
