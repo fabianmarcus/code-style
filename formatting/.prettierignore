@@ -1,0 +1,15 @@
+node_modules
+.git
+.next
+dist
+build
+coverage
+out
+lib
+.angular
+firebase-debug.log
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+*.min.js
+*.min.css
