@@ -1,6 +1,6 @@
 # Code Style
 
-Central repository for reusable coding standards for formatting and linting.
+Central repository for personal preferred reusable coding standards for formatting and linting.
 
 The goal is to provide consistent configurations that can be imported in multiple projects and extended locally when needed.
 
