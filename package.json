@@ -1,0 +1,117 @@
+{
+  "name": "@fabianmarcus/code-style",
+  "version": "1.0.0",
+  "description": "Central repository for reusable coding standards for formatting and linting. The goal is to provide consistent configurations that can be imported in multiple projects and extended locally when needed.",
+  "keywords": [
+    "code",
+    "style",
+    "formatting",
+    "linting",
+    "eslint",
+    "prettier",
+    "standards",
+    "defaults",
+    "reusable"
+  ],
+  "homepage": "https://github.com/fabianmarcus/code-style#readme",
+  "bugs": {
+    "url": "https://github.com/fabianmarcus/code-style/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabianmarcus/code-style.git"
+  },
+  "license": "ISC",
+  "author": "Fabian Marcus <fabian@fabian-marcus.de>",
+  "type": "module",
+  "files": [
+    "README.md",
+    "formatting",
+    "linting"
+  ],
+  "exports": {
+    "./formatting/prettier": "./formatting/prettier.config.mjs",
+    "./linting/base": "./linting/eslint.config.mjs",
+    "./linting/react": "./linting/react.eslint.config.mjs",
+    "./linting/angular": "./linting/angular.eslint.mjs",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "@eslint/js": ">=9 <10",
+    "angular-eslint": ">=20 <21",
+    "eslint": ">=9 <10",
+    "eslint-plugin-import": ">=2 <3",
+    "eslint-plugin-jsdoc": ">=50 <51",
+    "eslint-plugin-jsx-a11y": ">=6 <7",
+    "eslint-plugin-n": ">=17 <18",
+    "eslint-plugin-perfectionist": ">=4 <5",
+    "eslint-plugin-react": ">=7 <8",
+    "eslint-plugin-react-hooks": ">=5 <6",
+    "globals": ">=15 <16",
+    "prettier": ">=3 <4",
+    "typescript-eslint": ">=8 <9"
+  },
+  "peerDependenciesMeta": {
+    "@eslint/js": {
+      "optional": true
+    },
+    "angular-eslint": {
+      "optional": true
+    },
+    "eslint": {
+      "optional": true
+    },
+    "eslint-plugin-import": {
+      "optional": true
+    },
+    "eslint-plugin-jsdoc": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-n": {
+      "optional": true
+    },
+    "eslint-plugin-perfectionist": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "globals": {
+      "optional": true
+    },
+    "prettier": {
+      "optional": true
+    },
+    "typescript-eslint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": ">=9 <10",
+    "angular-eslint": ">=20 <21",
+    "eslint": ">=9 <10",
+    "eslint-plugin-import": ">=2 <3",
+    "eslint-plugin-jsdoc": ">=50 <51",
+    "eslint-plugin-jsx-a11y": ">=6 <7",
+    "eslint-plugin-n": ">=17 <18",
+    "eslint-plugin-perfectionist": ">=4 <5",
+    "eslint-plugin-react": ">=7 <8",
+    "eslint-plugin-react-hooks": ">=5 <6",
+    "globals": ">=15 <16",
+    "prettier": ">=3 <4",
+    "typescript-eslint": ">=8 <9"
+  },
+  "scripts": {
+    "test": "echo \"No tests configured\"",
+    "check:package": "npm pack --dry-run"
+  }
+}
