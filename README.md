@@ -1,6 +1,6 @@
 # Code Style
 
-Central repository for personal preferred reusable coding standards for formatting and linting.
+Central repository for personal preferred and reusable coding standards for formatting and linting.
 
 The goal is to provide consistent configurations that can be imported in multiple projects and extended locally when needed.
 
@@ -50,4 +50,31 @@ ESLint + Angular:
 
 ```bash
 npm i -D angular-eslint
+```
+
+## Publish Preparation
+
+Increase the package version before publishing:
+
+```bash
+npm version patch
+```
+
+Use `patch`, `minor`, or `major` depending on the change scope.
+
+Short release flow example:
+
+```bash
+npm version patch
+git push --follow-tags
+```
+
+Important: Run the version bump before pushing or merging into the `main` branch.
+
+## Manual Deployment
+
+Use this only if publishing is not automated by CI:
+
+```bash
+npm publish
 ```
