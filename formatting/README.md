@@ -7,12 +7,20 @@ These files provide a central, reusable Prettier baseline.
 - `prettier.config.mjs`: General team defaults
 - `.prettierignore`: General ignore list for build/generated artifacts
 
+## Install Dependencies
+
+Install the package and Prettier:
+
+```bash
+npm i -D @fabianmarcus/code-style prettier
+```
+
 ## Usage In A Project (ESM)
 
 Create a `prettier.config.mjs` file in the target project:
 
 ```js
-import baseConfig from "../code-style/formatting/prettier.config.mjs";
+import baseConfig from "@fabianmarcus/code-style/formatting/prettier";
 
 const prettierConfig = {
   ...baseConfig,
@@ -24,7 +32,7 @@ export default prettierConfig;
 ## Project-Specific Overrides
 
 ```js
-import baseConfig from "../code-style/formatting/prettier.config.mjs";
+import baseConfig from "@fabianmarcus/code-style/formatting/prettier";
 
 const prettierConfig = {
   ...baseConfig,

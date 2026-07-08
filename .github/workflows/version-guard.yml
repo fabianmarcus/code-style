@@ -1,0 +1,37 @@
+name: Version Guard
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  check-version-on-pr:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Ensure version changed compared to base branch
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if ! git cat-file -e "$BASE_SHA:package.json" 2>/dev/null; then
+            echo "::warning::No package.json found on base branch yet. Skipping version bump check for this PR."
+            exit 0
+          fi
+
+          BASE_VERSION=$(git show "$BASE_SHA:package.json" | node -e "let data=''; process.stdin.on('data', c => data += c); process.stdin.on('end', () => process.stdout.write(JSON.parse(data).version));")
+          HEAD_VERSION=$(node -p "require('./package.json').version")
+
+          echo "Base version: $BASE_VERSION"
+          echo "Head version: $HEAD_VERSION"
+
+          if [ "$BASE_VERSION" = "$HEAD_VERSION" ]; then
+            echo "::error::Version in package.json was not changed. Bump version before merge into main."
+            exit 1
+          fi
