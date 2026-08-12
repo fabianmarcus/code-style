@@ -105,8 +105,10 @@ const eslintConfig = defineConfig([
       'import/no-unresolved': ['error'], // Ensure imports point to a file/module that can be resolved
       'import/no-duplicates': ['error'], // Disallow duplicate imports
       'perfectionist/sort-imports': ['error', { // Sort imports by line length (shortest first)
-        order: 'asc',
-        type: 'line-length',
+        order: "asc",
+        newlinesBetween: 1,
+        type: "line-length",
+        groups: ["type", "side-effect", "unknown"],
       }],
 
       // Node.js & Security
